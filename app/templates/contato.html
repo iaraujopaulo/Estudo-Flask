@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatos</title>
+</head>
+<body>
+    <h1>Formulário GET</h1>
+    
+    <form action="" method="get">
+        <div>
+            Digite algo para pesquisar:
+            <h3>Fomulário GET</h3>
+            <input type="text" name="pesquisa" placeholder="Pesquisar">
+            <button type="submit">Pesquisar</button>
+            
+        </div>
+    </form>
+
+    <p>Você pesquisou: {{context["pesquisa"]}}</p>
+
+    <hr>
+    <br>
+    <hr>
+    <form action="" method="post">
+        <div>
+            <h3>Formulário POST</h3>
+            <label for="">Nome:</label>
+            <input type="text" name="nome" placeholder="Pesquisar...">
+            <label for="">Email:</label>
+            <input type="text" name="email" placeholder="Pesquisar...">
+            <label for="">Assunto:</label>
+            <input type="text" name="assunto" placeholder="Pesquisar...">
+            <label for="">Mensagem:</label>
+            <input type="text" name="mensagem" placeholder="Pesquisar...">
+            <button type="submit">Pesquisar</button>
+        </div>
+    </form>
+</body>
+</html>
