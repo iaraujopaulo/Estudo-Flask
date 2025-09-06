@@ -3,3 +3,4 @@ python -m venv .venv
 pip install Flask
 pip install Flask-sqlalchemy Flask-Migrate
 pip install flask_wtf
+pip install -r requirements.txt
