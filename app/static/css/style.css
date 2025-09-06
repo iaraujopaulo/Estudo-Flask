@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h3 {
+    color: #0056b3;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#get, #form > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+/* Estilo para inputs e botões */
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex-grow: 1;
+}
+
+/* Alinhamento dos botões */
+button[type="submit"], 
+#btn, 
+input[type="submit"] {
+    padding: 8px 15px;  /* Tamanho menor */
+    font-size: 14px;  /* Fonte menor */
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: auto;  /* Ajuste para botões ficarem com o tamanho adequado */
+}
+
+button[type="submit"]:hover, 
+#btn:hover {
+    background-color: #0056b3;
+}
+
+/* Alinhamento de inputs */
+input[type="text"], 
+input[type="email"], 
+textarea {
+    padding: 8px;  /* Tamanho menor dos campos */
+    font-size: 14px;  /* Fonte menor nos inputs */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 250px;  /* Diminuir a largura dos campos */
+    margin-bottom: 10px;  /* Espaço entre os campos */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Rótulos */
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Estilo de parágrafos */
+p {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Linha horizontal */
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ccc;
+    margin: 20px 0;
+}
