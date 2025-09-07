@@ -1,0 +1,62 @@
+h3 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+form {
+
+    /* Apenas para centralizar o form na página */
+    margin: 0 auto;
+    /* Para ver as bordas do formulário */
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+form div {
+    /*para deixae o form em coluna */
+    margin-top: 1em;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+  text-align: left;
+}
+
+input { 
+    padding: 10px 15px;
+    border: 1px solid #777;    
+}
+
+#mensagem input {
+    padding: 10px;
+    height: 150px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+form div btnSubmit  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btnSubmit {
+    background-color: #34c8db;
+    color: black;
+    font-weight: bold;
+    border: none;
+    width: 200px;
+    padding: 10px 20px;
+    color: black;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: 0.4s;
+}

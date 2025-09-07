@@ -1,13 +1,28 @@
 from app import app, db
-from flask import render_template, url_for, request #renderizar arquivo html
+from flask import render_template, url_for, request, redirect #renderizar arquivo html
 from app.models import Contato
+from app.forms import ContatoForm
 
 @app.route("/")
 def homepage():
-    return render_template("index.html")
+   context = {
+      "usuario" : "Pedro P.",
+      "idade" : 20
+   }
+   return render_template("index.html", context = context)
 
 @app.route("/contato/", methods = ["GET", "POST"])
-def secondpage():
+def contato():
+   form = ContatoForm()
+   if form.validate_on_submit():
+      form.save()
+      return redirect(url_for("homepage"))
+
+   return render_template("contato.html", form = form)
+
+'''
+@app.route("/contatoOld/", methods = ["GET", "POST"])
+def contatoOld():
    context = {}
    if request.method == "GET":
       pesquisa = request.args.get("pesquisa")
@@ -29,4 +44,5 @@ def secondpage():
       db.session.add(contato)
       db.session.commit()
 
-   return render_template("contato.html", context = context)
+   return render_template("contatoOld.html", context = context)
+'''
