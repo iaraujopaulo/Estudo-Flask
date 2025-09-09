@@ -7,7 +7,7 @@ from app.forms import ContatoForm
 def homepage():
    context = {
       "usuario" : "Pedro P.",
-      "idade" : 20
+      "idade" : 74
    }
    return render_template("index.html", context = context)
 

@@ -1,1 +1,9 @@
-Single-database configuration for Flask.
+//Single-database configuration for Flask.
+//para criar uma venv
+//python -m venev .venv
+
+//instalar as bibliotecas
+//pip install Flask
+//pip install Flask-SQLAlchemy
+//pip install Flask-Migrate
+//pip install flask_wtf
