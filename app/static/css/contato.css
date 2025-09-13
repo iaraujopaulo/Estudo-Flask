@@ -2,6 +2,7 @@ h3 {
     font-size: 30px;
     font-weight: bold;
     text-align: center;
+    text-transform: uppercase;
 }
 
 form {
@@ -33,8 +34,6 @@ input {
 
 #mensagem input {
     padding: 10px;
-    height: 150px;
-    padding: 1em;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
