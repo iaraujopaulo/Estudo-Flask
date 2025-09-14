@@ -11,7 +11,7 @@ form {
     margin: 0 auto;
     /* Para ver as bordas do formulário */
     padding: 1rem;
-    border: 1px solid #ccc;
+    border: 1px solid blue;
     border-radius: 10px;
 }
 
@@ -29,7 +29,7 @@ label {
 
 input { 
     padding: 10px 15px;
-    border: 1px solid #777;    
+    border: 1px solid blue;   
 }
 
 #mensagem input {

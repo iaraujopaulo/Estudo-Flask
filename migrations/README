@@ -7,4 +7,10 @@ pip install Flask
 pip install Flask-SQLAlchemy
 pip install Flask-Migrate
 pip install flask_wtf
+pip install python-dotenv
 pip install flask-login flask-bcrypt
+
+
+  (depois que criar um novo banco)
+flask db migrate
+flask db upgrade
