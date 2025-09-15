@@ -4,13 +4,13 @@ from flask_login import login_user, logout_user, current_user
 
 from app.models import Contato
 from app.forms import ContatoForm, UserForm, LoginForm
-
-
+"""
 from wtforms import PasswordField
 from wtforms.validators import EqualTo, ValidationError
 
 from app import bcrypt
 from app.models import User
+"""
 
 @app.route("/", methods = ["GET", "POST"])
 def homepage():
