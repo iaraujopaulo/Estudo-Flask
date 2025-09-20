@@ -1,3 +1,11 @@
+<<<<<<< HEAD
 .venv
 
 .env
+=======
+venv
+
+.env
+
+gerarToken.py
+>>>>>>> b1a9875d274cf3fc9553fda444136b5717457815

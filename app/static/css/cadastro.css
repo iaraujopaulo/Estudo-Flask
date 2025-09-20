@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#userCad {
+    padding: 5px;
+    margin: 20px;
+    width: 1000px;
+    border: 1px solid blue;
+    border-radius: 10px;
+}
+h3 {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 20px;
+
+}
+#form {
+
+    margin: 5px;
+    margin-bottom: 30px;
+    border: 1px solid blue;
+    border-radius: 10px;
+}
+
+input {
+    width: 500px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+    margin-left: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.senha input {
+    width: 300px;
+}
+
+label {
+    margin-left: 30px;
+    font-weight: bold;
+}
+
+.nome, 
+.email,
+.senha {
+    border: 1px solid blue;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+#btnSubmit {
+    padding: 10px 20px;
+    background-color: #4caf86; /* Cor de fundo */
+    color: rgb(14, 13, 13); /* Cor do texto */
+    font-weight: bold;
+    width: 200px;
+    height: 40px;
+    font-size: 1.3rem; 
+    text-decoration: none; /* Remove o sublinhado padrão do link */
+    border: none; /* Remover as bordas */
+    border-radius: 10px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor para apontar */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    transition: 0.4s;
+}
+
+#btnSubmit:hover {
+  background-color: #4cafa7 ; /* Cor de fundo ao passar o mouse */
+}

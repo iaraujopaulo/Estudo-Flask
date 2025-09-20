@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../static/css/cadastro.css">
+</head>
+<body>
+    <div id="userCad">
+        <h3>Cadastro de Usuários</h3>
+
+        <form id="form" method="post">
+
+            {{form.csrf_token}}
+            <div class="nome">
+                {{form.nome.label}}
+                {{form.nome}}
+                
+                {{form.sobrenome.label}}
+                {{form.sobrenome}}
+            </div>    
+            <br>
+            <div class="email">
+                {{form.email.label}}
+                {{form.email}}
+            </div>
+            <br>
+            <div class="senha">
+                {{form.senha.label}}
+                {{form.senha}}
+            <br>
+                {{form.confirmacao_senha.label}}
+                {{form.confirmacao_senha}}
+            </div>
+            <br>
+            <div id="btnSubmit">
+                 {{form.btnSubmit}}
+            </div>    
+        </form>
+    </div>
+</body>
+</html>

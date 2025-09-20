@@ -1,9 +1,27 @@
-//Single-database configuration for Flask.
-//para criar uma venv
-//python -m venev .venv
+//Single-database configuration for Flask.//
+   (criar uma venv)
+python -m venv .venv
 
-//instalar as bibliotecas
-//pip install Flask
-//pip install Flask-SQLAlchemy
-//pip install Flask-Migrate
-//pip install flask_wtf
+   (instalar as bibliotecas)
+pip install Flask
+pip install Flask-SQLAlchemy
+pip install Flask-Migrate
+pip install flask_wtf
+pip install python-dotenv
+pip install flask-login flask-bcrypt
+
+
+  (depois que criar um novo banco)
+flask db migrate
+flask db upgrade
+
+// criar a env
+( .env )
+
+dentro da env
+DATABASE_URI = sqlite:///database.db   
+SECRET_KEY = qwer1234yuio5678azsxdcfvgbhnjm
+
+alteração
+alteração 2
+alteração 3

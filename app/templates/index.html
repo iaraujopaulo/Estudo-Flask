@@ -3,20 +3,105 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../static/css/stilo.css">
+        <title>Pág inicial</title>
+    </head>
+    <body>
+        <img id="img" src="{{ url_for('static', filename='img/pyFlask.png') }}">
+        <div id="container">
+            <div id="header">
+            <br>
+               <p>Deixe seu contato</p>
+               <a href="{{ url_for('contato') }}" class="contato">Contato</a>
+            <br>
+            </div>
+            <hr>
+            <br>
+            {% if current_user.is_authenticated %}
+                <span>{{ current_user.nome }} {{ current_user.sobrenome }}</span>
+                <a href="{{url_for('logout')}}">Sair</a>
+            {% else %}
+            {{form.csrf_token}}
+            <form method="post"> 
+            
+                <div id="form">
+                    <h1>Bem-Vindo(a) de volta!</h1>
+                    <div id="acesso">
+                       {{form.email.label}}
+                       {{form.email}}                
+                <br>
+                       {{form.senha.label}}
+                       {{form.senha}}
+                    </div>
+                <br>
+                <br>
+                    <div id="btnSubmit">
+                        {{form.btnSubmit}}
+                    </div>
+                </div>
+            <br>
+            <br>
+            <hr>
+            <br>
+            <p>Não tem cadastro? 
+                <a href="{{ url_for('cadastro') }}">
+                Clique aqui e faça seu cadastro</a></p>
+            <br>
+            </form>
+        </div>
+        <footer id="footer">
+            <a target="_blank" rel="noopener" href="https://www.google.com/?hl=pt_BR">
+                <img loading="lazy" class="footseg" alt="Google - Site Seguro" title="Google - Site Seguro" src="https://img.terabyteshop.com.br/selos/google-site-seguro.png" width="90" height="25">
+              </a>
+        </footer>
+                
+        {% endif %}
+    </body>
+</html>
+
+
+
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Estudo Flask</title>
         <link rel="stylesheet" href="../static/css/stilo.css">
 
     </head>
     <body>
-        <div>
-            <h3>Estudo Flask</h3>
-            <h5>Bom dia!</h5>
-        </div>
 
-        <div>
-            <p>Bem vindos à aula de Flask!</p>
-            <a href="{{url_for('contato')}}">Formulário</a>
+        {% if current_user.is_authenticated %}
+        <span>{{ current_user.nome }} {{ current_user.sobrenome }}</span>
+            <a href="{{url_for('logout')}}">Sair</a>
+        {% else %}
+        <div id="container">
+            <h3>Formulários</h3>
+            <form id="form">
+                <div class="cadastro">
+                    <p>Faça seu casdatro</p>
+                    <a href="{{url_for('cadastro')}}" class="btn">Cadastro</a>
+                </div>
+
+                <div class="formulario">
+                    <p>Preencha o Formulário</p>
+                    <a href="{{url_for('contato')}}" class="btn">Formulário</a>
+                </div>
+
+                <br>
+                Não tem cadastro? <a href="{{ url_for('cadastro') }}">Clique aqui e faça seu cadastro</a>
+            </form>
         </div>
+        {% endif %}
+
 
     </body>
 </html>
+-->
+
