@@ -1,15 +1,12 @@
 from app import db, login_manager
 from datetime import datetime
-<<<<<<< HEAD
+
 from flask_login import UserMixin
 
-=======
-from app import login_manager
-from flask_login import UserMixin
+from app import login_manager 
+from flask_login import UserMixin 
 
-
->>>>>>> b1a9875d274cf3fc9553fda444136b5717457815
-@login_manager.user_loader
+@login_manager.user_loader 
 def load_user(user_id):
     return User.query.get(user_id)
 
