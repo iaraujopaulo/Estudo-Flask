@@ -4,13 +4,7 @@ from flask_login import login_user, logout_user, current_user
 
 from app.models import Contato
 from app.forms import ContatoForm, UserForm, LoginForm
-"""
-from wtforms import PasswordField
-from wtforms.validators import EqualTo, ValidationError
 
-from app import bcrypt
-from app.models import User
-"""
 
 @app.route("/", methods = ["GET", "POST"])
 def homepage():
@@ -25,12 +19,13 @@ def homepage():
 
 @app.route("/cadastro/", methods = ["GET", "POST"])
 def cadastro():
-    form = UserForm()
-    if form.validate_on_submit():
-        user = form.save()
-        login_user(user, remember=True)
-        return redirect(url_for("homepage"))
-    return render_template("cadastro.html", form = form)
+   form = UserForm()
+   if form.validate_on_submit():
+      print("DEU CERTO")
+      user = form.save()
+      login_user(user, remember=True)
+      return redirect(url_for("homepage"))
+   return render_template("cadastro.html", form = form)
 
 
 @app.route("/sair/")
